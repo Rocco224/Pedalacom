@@ -17,7 +17,7 @@ namespace Pedalacom.Controllers
         {
             _logger = logger;
         }
-
+        // controller temperatura
         [HttpGet(Name = "GetWeatherForecast")]
         public IEnumerable<WeatherForecast> Get()
         {
