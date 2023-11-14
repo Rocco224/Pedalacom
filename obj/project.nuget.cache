@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "0TkZHPlEoWseE9ubabNJINzdMZz9mBPZ88tegTeahR6/CHNDlgrGBm3fXqVEBza31a/7vi+9Y39E6/49xtP2bA==",
+  "dgSpecHash": "tEW9DqH+MNDxZ+3VRA43MqZsuiLW6uKfTkJsGRc0PsEyF5fmbtnzvRbhsDWVjSyA2QRv1IHsBEc9Xn+6pq4KmQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Rocco\\source\\repos\\Pedalacom\\Pedalacom.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Rocco\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.12\\microsoft.aspnetcore.openapi.7.0.12.nupkg.sha512",
     "C:\\Users\\Rocco\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\Rocco\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512",
+    "C:\\Users\\Rocco\\.nuget\\packages\\nlog\\5.2.5\\nlog.5.2.5.nupkg.sha512",
     "C:\\Users\\Rocco\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
     "C:\\Users\\Rocco\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
     "C:\\Users\\Rocco\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
