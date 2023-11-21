@@ -13,6 +13,17 @@ namespace Pedalacom
 
             // Add services to the container.
 
+            builder.Services.AddCors(opt =>
+            {
+                opt.AddPolicy(
+                    "CarsPolicy",
+                    builder => builder
+                    .AllowAnyMethod()
+                    .AllowAnyOrigin()
+                    .AllowAnyHeader()
+                    );
+            });
+
             builder.Services.AddControllers().AddJsonOptions(
                 x => x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 
@@ -33,6 +44,8 @@ namespace Pedalacom
             }
 
             app.UseHttpsRedirection();
+            
+            app.UseCors("CarsPolicy");
 
             app.UseAuthorization();
 
