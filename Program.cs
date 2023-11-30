@@ -1,5 +1,8 @@
 
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
+using Pedalacom.Authentication;
 using Pedalacom.Data;
 using System.Text.Json.Serialization;
 
@@ -33,7 +36,11 @@ namespace Pedalacom
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
-
+            builder.Services.AddAuthentication().AddScheme<AuthenticationSchemeOptions, BasicAuthenticationHandler>("BasicAuthentication", null);
+            builder.Services.AddAuthorization(opt =>
+            {
+                opt.AddPolicy("BasicAuthentication", new AuthorizationPolicyBuilder("BasicAuthenication").RequireAuthenticatedUser().Build());
+            });
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -46,7 +53,7 @@ namespace Pedalacom
             app.UseHttpsRedirection();
             
             app.UseCors("CarsPolicy");
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
 

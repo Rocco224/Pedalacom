@@ -5,11 +5,13 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Pedalacom.Authentication;
 using Pedalacom.Data;
 using Pedalacom.Models.CustomerModel;
 
 namespace Pedalacom.Controllers
 {
+    [BasicAutorizationAttributes]
     [Route("api/[controller]")]
     [ApiController]
     public class CustomersController : ControllerBase
