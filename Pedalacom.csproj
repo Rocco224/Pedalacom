@@ -22,4 +22,10 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="PedalacomLibrary">
+      <HintPath>..\PedalacomLibrary\bin\Debug\net7.0\PedalacomLibrary.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
