@@ -55,7 +55,7 @@ namespace Pedalacom.Authentication
             string email = authorizationSplit[0];
             string password = authorizationSplit[1];
 
-            // Quhery DB
+            // Query DB
             var user = new SqlParameter("email", email);
 
             var customers = _context.Customers
@@ -87,7 +87,6 @@ namespace Pedalacom.Authentication
                     customer.SalesOrderHeaders
                     );
                 });
-
 
             string ash256Password = Password.EncryptPassword(password);
             _saltedPassword = Password.DecryptSaltPassword(_authUser.PasswordSalt, ash256Password);
