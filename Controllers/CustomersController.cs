@@ -11,7 +11,6 @@ using Pedalacom.Models.CustomerModel;
 
 namespace Pedalacom.Controllers
 {
-    [BasicAutorizationAttributes]
     [Route("api/[controller]")]
     [ApiController]
     public class CustomersController : ControllerBase
@@ -24,6 +23,7 @@ namespace Pedalacom.Controllers
         }
 
         // GET: api/Customers
+        [BasicAutorizationAttributes]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Customer>>> GetCustomers()
         {

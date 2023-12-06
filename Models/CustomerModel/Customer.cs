@@ -89,4 +89,26 @@ public partial class Customer
     public virtual ICollection<CustomerAddress> CustomerAddresses { get; set; } = new List<CustomerAddress>();
 
     public virtual ICollection<SalesOrderHeader> SalesOrderHeaders { get; set; } = new List<SalesOrderHeader>();
+    public Customer() { }
+    public Customer (int customerId, bool nameStyle, string? title, string firstName, string? middleName, string lastName, string? suffix, string? companyName, string? salesPerson, string? emailAddress, string? phone, string passwordHash, string passwordSalt, Guid rowguid, DateTime modifiedDate, byte? valid, ICollection<CustomerAddress> customerAddresses, ICollection<SalesOrderHeader> salesOrderHeaders)
+    {
+        CustomerId = customerId;
+        NameStyle = nameStyle;
+        Title = title;
+        FirstName = firstName;
+        MiddleName = middleName;
+        LastName = lastName;
+        Suffix = suffix;
+        CompanyName = companyName;
+        SalesPerson = salesPerson;
+        EmailAddress = emailAddress;
+        Phone = phone;
+        PasswordHash = passwordHash;
+        PasswordSalt = passwordSalt;
+        Rowguid = rowguid;
+        ModifiedDate = modifiedDate;
+        Valid = valid;
+        CustomerAddresses = customerAddresses;
+        SalesOrderHeaders = salesOrderHeaders;
+    }
 }
