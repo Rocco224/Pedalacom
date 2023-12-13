@@ -23,7 +23,6 @@ namespace Pedalacom.Controllers
         }
 
         // GET: api/Customers
-        [BasicAutorizationAttributes]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Customer>>> GetCustomers()
         {
@@ -82,21 +81,6 @@ namespace Pedalacom.Controllers
             }
 
             return NoContent();
-        }
-
-        // POST: api/Customers
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPost]
-        public async Task<ActionResult<Customer>> PostCustomer(Customer customer)
-        {
-          if (_context.Customers == null)
-          {
-              return Problem("Entity set 'AdventureWorks2019Context.Customers'  is null.");
-          }
-            _context.Customers.Add(customer);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction("GetCustomer", new { id = customer.CustomerId }, customer);
         }
 
         // DELETE: api/Customers/5

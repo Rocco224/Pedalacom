@@ -1,83 +1,39 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Pedalacom.Data;
+using Pedalacom.Models.CustomerModel;
+using PedalacomLibrary;
 
 namespace Pedalacom.Controllers
-{
+{        
+    [Route("[controller]")]    
+    [ApiController]
     public class RegisterController : Controller
     {
-        // GET: RegisterController
-        public ActionResult Index()
-        {
-            return View();
-        }
+        private readonly AdventureWorks2019Context _context;
 
-        // GET: RegisterController/Details/5
-        public ActionResult Details(int id)
+        public RegisterController(AdventureWorks2019Context context)
         {
-            return View();
-        }
-
-        // GET: RegisterController/Create
-        public ActionResult Create()
-        {
-            return View();
+            _context = context;
         }
 
         // POST: RegisterController/Create
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public async Task<ActionResult<Customer>> PostCustomer(Customer customer)
         {
-            try
+            if (_context.Customers == null)
             {
-                return RedirectToAction(nameof(Index));
+                return Problem("Entity set 'AdventureWorks2019Context.Customers'  is null.");
             }
-            catch
-            {
-                return View();
-            }
-        }
 
-        // GET: RegisterController/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
+            KeyValuePair<string,string> encryptedSaltPassword = Password.EncryptSaltPassword(Password.EncryptPassword(customer.PasswordHash));
+            customer.PasswordHash = encryptedSaltPassword.Value;
+            customer.PasswordSalt = encryptedSaltPassword.Key;
 
-        // POST: RegisterController/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
+            _context.Customers.Add(customer);
+            await _context.SaveChangesAsync();
 
-        // GET: RegisterController/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: RegisterController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+            return CreatedAtAction("GetCustomer", new { id = customer.CustomerId }, customer);
         }
     }
 }

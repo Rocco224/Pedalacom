@@ -96,6 +96,9 @@ namespace Pedalacom.Authentication
 
             var authenticationUser = new AuthenticationUser(_authUser.FirstName, "BasicAuthentication",true);
             var claims = new ClaimsPrincipal(new ClaimsIdentity(authenticationUser));
+
+            Console.WriteLine("Login effettuato con successo");
+
             return Task.FromResult(AuthenticateResult.Success(new AuthenticationTicket(claims, "BasicAuthentication")));
         }
     }

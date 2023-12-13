@@ -1,82 +1,26 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Pedalacom.Authentication;
+using Pedalacom.Models.UserModel;
 
 namespace Pedalacom.Controllers
 {
+    [BasicAutorizationAttributes]
+    [Route("api/[controller]")]
+    [ApiController]
     public class LoginController : Controller
     {
-        // GET: LoginController
-        public ActionResult Index()
-        {
-            return View();
-        }
-
-        // GET: LoginController/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
-
-        // GET: LoginController/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: LoginController/Create
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public IActionResult Auth(User user)
         {
             try
             {
-                return RedirectToAction(nameof(Index));
+                return Ok();
             }
-            catch
+            catch (Exception ex)
             {
-                return View();
-            }
-        }
 
-        // GET: LoginController/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: LoginController/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: LoginController/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: LoginController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
+                throw ex;
             }
         }
     }
