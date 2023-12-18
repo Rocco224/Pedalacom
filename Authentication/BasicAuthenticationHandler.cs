@@ -19,7 +19,6 @@ namespace Pedalacom.Authentication
     public class BasicAuthenticationHandler : AuthenticationHandler<AuthenticationSchemeOptions>
     {
         private readonly AdventureWorks2019Context _context;
-        public Customer _authUser = new ();
         public KeyValuePair<string,string> _saltedPassword;
 
         public BasicAuthenticationHandler(
@@ -35,66 +34,45 @@ namespace Pedalacom.Authentication
         protected override Task<AuthenticateResult> HandleAuthenticateAsync()
         {
             Response.Headers.Add("WWW-Authenticate", "Basic");
+
             if (!Request.Headers.ContainsKey("Authorization"))
-            {
                 return Task.FromResult(AuthenticateResult.Fail("Autorizzazione mancante: Impossibile accedere al servizio"));
-            }
+            
+
             var authorizationHeader = Request.Headers["Authorization"].ToString();
             var authorizationRegEx = new Regex(@"Basic (.*)");
+
             if (!authorizationRegEx.IsMatch(authorizationHeader))
-            {
                 return Task.FromResult(AuthenticateResult.Fail("Autorizzazione non valida: Impossibile accedere al servizio"));
-            }
+            
 
             var authorizationBase64 = Encoding.UTF8.GetString(Convert.FromBase64String(authorizationRegEx.Replace(authorizationHeader, "$1")));
             var authorizationSplit = authorizationBase64.Split(":", 2);
-            if(authorizationSplit.Length!=2) {
-                return Task.FromResult(AuthenticateResult.Fail("Autorizzazione non valida: Impossibile accedere al servizio"));
 
-            }
+            if(authorizationSplit.Length!=2) 
+                return Task.FromResult(AuthenticateResult.Fail("Autorizzazione non valida: Impossibile accedere al servizio"));
+            
             string email = authorizationSplit[0];
             string password = authorizationSplit[1];
 
             // Query DB
             var user = new SqlParameter("email", email);
 
-            var customers = _context.Customers
+            var customer = _context.Customers
                 .FromSql($"EXEC [dbo].[sp_CheckEmail] @email={user}")
-                .ToList();
+                .AsEnumerable()
+                .SingleOrDefault();
 
-            if(customers == null )
+            if(customer == null )
                 return Task.FromResult(AuthenticateResult.Fail("Utente non trovato"));
 
-            customers.ForEach((customer) => {
-                _authUser = new Customer(
-                    customer.CustomerId,
-                    customer.NameStyle,
-                    customer.Title,
-                    customer.FirstName,
-                    customer.MiddleName,
-                    customer.LastName,
-                    customer.Suffix,
-                    customer.CompanyName,
-                    customer.SalesPerson,
-                    customer.EmailAddress,
-                    customer.Phone,
-                    customer.PasswordHash,
-                    customer.PasswordSalt,
-                    customer.Rowguid,
-                    customer.ModifiedDate,
-                    customer.Valid,
-                    customer.CustomerAddresses,
-                    customer.SalesOrderHeaders
-                    );
-                });
-
             string ash256Password = Password.EncryptPassword(password);
-            _saltedPassword = Password.DecryptSaltPassword(_authUser.PasswordSalt, ash256Password);
+            _saltedPassword = Password.DecryptSaltPassword(customer.PasswordSalt, ash256Password);
 
-            if (_authUser.PasswordHash != _saltedPassword.Value)
+            if (customer.PasswordHash != _saltedPassword.Value)
                 return Task.FromResult(AuthenticateResult.Fail("Password errata"));
 
-            var authenticationUser = new AuthenticationUser(_authUser.FirstName, "BasicAuthentication",true);
+            var authenticationUser = new AuthenticationUser(customer.FirstName, "BasicAuthentication",true);
             var claims = new ClaimsPrincipal(new ClaimsIdentity(authenticationUser));
 
             Console.WriteLine("Login effettuato con successo");

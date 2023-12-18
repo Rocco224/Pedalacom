@@ -19,7 +19,6 @@ namespace Pedalacom.Controllers
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
         }

@@ -514,3 +514,5 @@ C:\Users\Rocco\source\repos\Pedalacom\obj\Debug\net7.0\refint\Pedalacom.dll
 C:\Users\Rocco\source\repos\Pedalacom\obj\Debug\net7.0\Pedalacom.pdb
 C:\Users\Rocco\source\repos\Pedalacom\obj\Debug\net7.0\Pedalacom.genruntimeconfig.cache
 C:\Users\Rocco\source\repos\Pedalacom\obj\Debug\net7.0\ref\Pedalacom.dll
+C:\Users\Rocco\source\repos\Pedalacom\obj\Debug\net7.0\Pedalacom.RazorAssemblyInfo.cache
+C:\Users\Rocco\source\repos\Pedalacom\obj\Debug\net7.0\Pedalacom.RazorAssemblyInfo.cs

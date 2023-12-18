@@ -5,6 +5,7 @@ using Pedalacom.Log;
 using Pedalacom.Models.CustomerModel;
 using Pedalacom.Models.OrderModel;
 using Pedalacom.Models.ProductModel;
+using Pedalacom.Models.CartModel;
 
 namespace Pedalacom.Data;
 
@@ -656,4 +657,6 @@ public partial class AdventureWorks2019Context : DbContext
     }
 
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+
+    public DbSet<Pedalacom.Models.CartModel.Cart> Cart { get; set; } = default!;
 }
