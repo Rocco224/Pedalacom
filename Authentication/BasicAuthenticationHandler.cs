@@ -56,10 +56,10 @@ namespace Pedalacom.Authentication
             string password = authorizationSplit[1];
 
             // Query DB
-            var user = new SqlParameter("email", email);
+            var emailParameter = new SqlParameter("email", email);
 
             var customer = _context.Customers
-                .FromSql($"EXEC [dbo].[sp_CheckEmail] @email={user}")
+                .FromSql($"EXEC [dbo].[sp_CheckEmail] @email={emailParameter}")
                 .AsEnumerable()
                 .SingleOrDefault();
 

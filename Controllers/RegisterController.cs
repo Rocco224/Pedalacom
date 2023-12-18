@@ -1,5 +1,8 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
 using Pedalacom.Data;
 using Pedalacom.Models.CustomerModel;
 using PedalacomLibrary;
@@ -23,8 +26,19 @@ namespace Pedalacom.Controllers
         {
             if (_context.Customers == null)
             {
-                return Problem("Entity set 'AdventureWorks2019Context.Customers'  is null.");
+                return Problem("Entity set 'AdventureWorks2019Context.Customers' is null.");
             }
+
+            //verifica email univoca
+            var emailParameter = new SqlParameter("email", customer.EmailAddress);
+
+            var user = _context.Customers
+                .FromSql($"EXEC [dbo].[sp_CheckEmail] @email={emailParameter}")
+                .AsEnumerable()
+                .SingleOrDefault();
+
+            if (user != null)
+                return Problem("Email esistente"); ;
 
             KeyValuePair<string,string> encryptedSaltPassword = Password.EncryptSaltPassword(Password.EncryptPassword(customer.PasswordHash));
             customer.PasswordHash = encryptedSaltPassword.Value;
