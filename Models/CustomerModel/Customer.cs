@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Mvc;
 using Pedalacom.Models.OrderModel;
 
 namespace Pedalacom.Models.CustomerModel;
@@ -85,6 +86,7 @@ public partial class Customer
     public DateTime ModifiedDate { get; set; }
 
     public byte? Valid { get; set; }
+    public string Role {  get; set; }
 
     public virtual ICollection<CustomerAddress>? CustomerAddresses { get; set; } = new List<CustomerAddress>();
 
@@ -110,5 +112,10 @@ public partial class Customer
         Valid = valid;
         CustomerAddresses = customerAddresses;
         SalesOrderHeaders = salesOrderHeaders;
+    }
+
+    internal Task<ActionResult<Customer>> Where(Func<object, bool> value)
+    {
+        throw new NotImplementedException();
     }
 }

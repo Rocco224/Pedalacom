@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Pedalacom.Authentication;
@@ -13,6 +15,7 @@ namespace Pedalacom.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    //[Authorize(Roles = "Admin")]
     public class CustomersController : ControllerBase
     {
         private readonly AdventureWorks2019Context _context;
@@ -26,12 +29,20 @@ namespace Pedalacom.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Customer>>> GetCustomers()
         {
-          if (_context.Customers == null)
-          {
-              return NotFound();
-          }
+            try
+            {
+                if (_context.Customers == null)
+                {
+                    return NotFound();
+                }
 
-            return await _context.Customers.Include(emp => emp.CustomerAddresses).Include(emp => emp.SalesOrderHeaders).ToListAsync();
+                return await _context.Customers.Include(emp => emp.CustomerAddresses).Include(emp => emp.SalesOrderHeaders).ToListAsync();
+            }
+            catch (Exception ex)
+            {
+                return Problem(ex.Message);
+            }
+
         }
 
         // GET: api/Customers/5
@@ -42,14 +53,14 @@ namespace Pedalacom.Controllers
           {
               return NotFound();
           }
-            var customer = await _context.Customers.FindAsync(id);
+           var customer = await _context.Customers.FindAsync(id);
 
-            if (customer == null)
-            {
-                return NotFound();
-            }
+           if (customer == null)
+           {
+               return NotFound();
+           }
 
-            return customer;
+           return customer;
         }
 
         // PUT: api/Customers/5

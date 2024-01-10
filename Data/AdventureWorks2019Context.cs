@@ -167,6 +167,9 @@ public partial class AdventureWorks2019Context : DbContext
             entity.Property(e => e.Phone)
                 .HasMaxLength(25)
                 .HasComment("Phone number associated with the person.");
+            entity.Property(e => e.Role)
+                .HasMaxLength(10)
+                .HasComment("Role of the user");
             entity.Property(e => e.Rowguid)
                 .HasDefaultValueSql("(newid())")
                 .HasComment("ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.")

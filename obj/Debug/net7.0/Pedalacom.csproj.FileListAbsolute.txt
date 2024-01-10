@@ -516,3 +516,4 @@ C:\Users\Rocco\source\repos\Pedalacom\obj\Debug\net7.0\Pedalacom.genruntimeconfi
 C:\Users\Rocco\source\repos\Pedalacom\obj\Debug\net7.0\ref\Pedalacom.dll
 C:\Users\Rocco\source\repos\Pedalacom\obj\Debug\net7.0\Pedalacom.RazorAssemblyInfo.cache
 C:\Users\Rocco\source\repos\Pedalacom\obj\Debug\net7.0\Pedalacom.RazorAssemblyInfo.cs
+C:\Users\Rocco\source\repos\Pedalacom\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

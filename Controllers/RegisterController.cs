@@ -38,9 +38,10 @@ namespace Pedalacom.Controllers
                 .SingleOrDefault();
 
             if (user != null)
-                return Problem("Email esistente"); ;
+                return Problem("Email esistente");
 
-            KeyValuePair<string,string> encryptedSaltPassword = Password.EncryptSaltPassword(Password.EncryptPassword(customer.PasswordHash));
+            string passwordSha256 = Password.EncryptPassword(customer.PasswordHash);
+            KeyValuePair<string,string> encryptedSaltPassword = Password.EncryptSaltPassword(passwordSha256);
             customer.PasswordHash = encryptedSaltPassword.Value;
             customer.PasswordSalt = encryptedSaltPassword.Key;
 
