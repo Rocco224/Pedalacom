@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "mSihd0UylCN+qkLcF1Fh0yMzPaWe+zzyQO7VhyWeekoxPwdNbJG2EcXpHM0/43t7jcgC7WjwuaZdGxcObGrKbw==",
+  "dgSpecHash": "7K4cWryKYvFJ/kCxyahukMSLGbYfBfpYOEI+iJMz4p5tbC2npp/fqIYR7CKXWaQQskAnCisLXSZVrc38RpxlJQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Rocco\\source\\repos\\Pedalacom\\Pedalacom.csproj",
   "expectedPackageFiles": [
@@ -121,7 +121,9 @@
     "C:\\Users\\Rocco\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
     "C:\\Users\\Rocco\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
     "C:\\Users\\Rocco\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
-    "C:\\Users\\Rocco\\.nuget\\packages\\nlog\\5.2.5\\nlog.5.2.5.nupkg.sha512",
+    "C:\\Users\\Rocco\\.nuget\\packages\\nlog\\5.2.8\\nlog.5.2.8.nupkg.sha512",
+    "C:\\Users\\Rocco\\.nuget\\packages\\nlog.extensions.logging\\5.3.8\\nlog.extensions.logging.5.3.8.nupkg.sha512",
+    "C:\\Users\\Rocco\\.nuget\\packages\\nlog.web.aspnetcore\\5.3.8\\nlog.web.aspnetcore.5.3.8.nupkg.sha512",
     "C:\\Users\\Rocco\\.nuget\\packages\\nuget.common\\6.6.1\\nuget.common.6.6.1.nupkg.sha512",
     "C:\\Users\\Rocco\\.nuget\\packages\\nuget.configuration\\6.6.1\\nuget.configuration.6.6.1.nupkg.sha512",
     "C:\\Users\\Rocco\\.nuget\\packages\\nuget.dependencyresolver.core\\6.6.1\\nuget.dependencyresolver.core.6.6.1.nupkg.sha512",
