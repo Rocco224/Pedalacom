@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "WqpySeWrVkneEwLda+FhifAduHjwj7n+U9n57RFATbvQRrbhOkfTdaIowXufV6onjYw6Ox7conie1TyEjyhLcw==",
+=======
+  "dgSpecHash": "7K4cWryKYvFJ/kCxyahukMSLGbYfBfpYOEI+iJMz4p5tbC2npp/fqIYR7CKXWaQQskAnCisLXSZVrc38RpxlJQ==",
+>>>>>>> 02b7bfa1e562c00c2b4254b41454231f4895644b
   "success": true,
   "projectFilePath": "C:\\Users\\Rocco\\source\\repos\\Pedalacom\\Pedalacom.csproj",
   "expectedPackageFiles": [

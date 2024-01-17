@@ -312,3 +312,7 @@ System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or propert
 2024-01-17 09:39:23.5627|20007|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Disposing connection to database 'AdventureWorks2019' on server '.\SQLEXPRESS'. 
 2024-01-17 09:39:23.5627|20008|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Disposed connection to database '' on server '' (0ms). 
 2024-01-17 09:39:23.5627|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5150/api/Customers - - - 500 - application/problem+json;+charset=utf-8 28286.9296ms 
+2024-01-17 09:39:30.6282|6|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN0N6UBP3N7S" received FIN. 
+2024-01-17 09:39:30.6282|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN0N6UBP3N7S" disconnecting. 
+2024-01-17 09:39:30.6282|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN0N6UBP3N7S" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2024-01-17 09:39:30.6412|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN0N6UBP3N7S" stopped. 
