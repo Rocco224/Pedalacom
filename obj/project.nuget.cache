@@ -1,10 +1,6 @@
 {
   "version": 2,
-<<<<<<< HEAD
   "dgSpecHash": "WqpySeWrVkneEwLda+FhifAduHjwj7n+U9n57RFATbvQRrbhOkfTdaIowXufV6onjYw6Ox7conie1TyEjyhLcw==",
-=======
-  "dgSpecHash": "7K4cWryKYvFJ/kCxyahukMSLGbYfBfpYOEI+iJMz4p5tbC2npp/fqIYR7CKXWaQQskAnCisLXSZVrc38RpxlJQ==",
->>>>>>> 02b7bfa1e562c00c2b4254b41454231f4895644b
   "success": true,
   "projectFilePath": "C:\\Users\\Rocco\\source\\repos\\Pedalacom\\Pedalacom.csproj",
   "expectedPackageFiles": [
@@ -242,5 +238,12 @@
     "C:\\Users\\Rocco\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\Rocco\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Si è verificato un problema durante la lettura del file di cache C:\\Users\\Rocco\\source\\repos\\Pedalacom\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

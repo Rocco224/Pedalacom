@@ -125,7 +125,7 @@ namespace Pedalacom.Controllers
                 return NotFound();
             }
             var customer = await _context.Customers
-                .Where(c => c.EmailAddress == email)
+                .Where(c => c.EmailAddress == email && c.CustomerId >= 29485)
                 .FirstOrDefaultAsync();
 
             if (customer == null)
