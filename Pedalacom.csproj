@@ -25,7 +25,7 @@
 
   <ItemGroup>
     <Reference Include="PedalacomLibrary">
-      <HintPath>..\PedalacomLibrary\bin\Debug\net7.0\PedalacomLibrary.dll</HintPath>
+      <HintPath>..\PedalacomLibrabry\bin\Debug\net7.0\PedalacomLibrary.dll</HintPath>
     </Reference>
   </ItemGroup>
 

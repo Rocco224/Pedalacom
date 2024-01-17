@@ -29,7 +29,7 @@ namespace Pedalacom.Controllers
           {
               return NotFound();
           }
-            return await _context.ProductCategories.ToListAsync();
+            return await _context.ProductCategories.Include(x=>x.Products).ToListAsync();
         }
 
         // GET: api/ProductCategories/5
