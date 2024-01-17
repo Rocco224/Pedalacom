@@ -9,35 +9,25 @@ namespace Pedalacom.Authentication
 {
     public class JwtManager
     {
-        private string _secretKey {  get; set; }
-        private string _issuer {  get; set; }
-        private string _audience { get; set; }
-
-        public JwtManager(string secretKey, string issuer, string audience) 
-        { 
-            _secretKey = secretKey;
-            _issuer = issuer;
-            _audience = audience;
-        }
-
-        public string GenerateJwtToken(Customer customer)
+        // Creazione del token
+        public static string GenerateJwtToken(Customer customer, string secretKey, string issuer, string audience)
         {
             Console.WriteLine(customer.FirstName);
             Console.WriteLine(customer.Role);
 
-            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_secretKey));
+            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey));
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
 
+            // Cosa inserire nel token
             var claims = new[]
             {
                 new Claim(ClaimTypes.Name, customer.FirstName),
                 new Claim(ClaimTypes.Role, customer.Role),
-                // Aggiungi altri claim necessari
             };
 
             var token = new JwtSecurityToken(
-                issuer: _issuer,
-                audience: _audience,
+                issuer: issuer,
+                audience: audience,
                 claims: claims,
                 expires: DateTime.UtcNow.AddMinutes(1), // Scadenza del token
                 signingCredentials: credentials
@@ -45,31 +35,6 @@ namespace Pedalacom.Authentication
 
             var tokenHandler = new JwtSecurityTokenHandler();
             return tokenHandler.WriteToken(token);
-        }
-
-        public bool ValidateJwtToken(string token, string secretKey, string issuer, string audience)
-        {
-            var tokenHandler = new JwtSecurityTokenHandler();
-            var validationParameters = new TokenValidationParameters
-            {
-                ValidateIssuer = true,
-                ValidateAudience = true,
-                ValidateLifetime = true,
-                ValidIssuer = issuer,
-                ValidAudience = audience,
-                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey))
-            };
-
-            try
-            {
-                SecurityToken validatedToken;
-                tokenHandler.ValidateToken(token, validationParameters, out validatedToken);
-                return true;
-            }
-            catch
-            {
-                return false;
-            }
         }
     }
 }

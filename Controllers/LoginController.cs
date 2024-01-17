@@ -10,6 +10,7 @@ using Pedalacom.Models.CustomerModel;
 using Pedalacom.Models.UserModel;
 using PedalacomLibrary;
 using Pedalacom.Handler;
+using NLog;
 
 namespace Pedalacom.Controllers
 {
@@ -18,14 +19,17 @@ namespace Pedalacom.Controllers
     public class LoginController : Controller
     {
         private readonly AdventureWorks2019Context _context;
-        private readonly JwtManager _jwtManager;
+        private readonly Jwt _jwt;
         private CustomerHandler _customerHandler;
+        private readonly ILogger<LoginController> _logger;
 
-        public LoginController(AdventureWorks2019Context context, JwtManager jwtManager) 
+        public LoginController(AdventureWorks2019Context context, Jwt jwt, ILogger<LoginController> logger) 
         { 
             _context = context;
-            _jwtManager = jwtManager;
+            _jwt = jwt;
             _customerHandler = new CustomerHandler(context);
+            _logger = logger;
+            _logger.LogDebug("NLog in LoginController");
         }
 
         [BasicAutorizationAttributes]
@@ -42,44 +46,94 @@ namespace Pedalacom.Controllers
             }
         }
 
+        [HttpPost("JwtLogin")]
+        public async Task<IActionResult> JwtLogin(User user)
+        {
+            try
+            {
+                Customer customer = _customerHandler.GetCustomer(user.Email);
+
+                string passwordSha256 = Password.EncryptPassword(user.Password);
+                KeyValuePair<string, string> encryptedSaltPassword = Password.DecryptSaltPassword(customer.PasswordSalt, passwordSha256);
+                string userPasswordSaltHash = encryptedSaltPassword.Value;
+
+                if (customer.PasswordHash != userPasswordSaltHash)
+                    throw new Exception("Password errata");
+
+                _logger.LogInformation("Login effettuato");
+
+                return Ok(JwtManager.GenerateJwtToken(customer, _jwt.SecretKey, _jwt.Issuer, _jwt.Audience));
+            }
+
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.Message);
+
+                throw;
+            }
+        }
+
+        // Metodo per ricevere il sale dell'utente
         [HttpPost("GetSalt")]
         public async Task<string> GetUserSalt(User user)
         {
             try
             {
+                _logger.LogInformation("Richiesta login utente");
+
                 Customer customer = _customerHandler.GetCustomer(user.Email);
 
                 return customer.PasswordSalt;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                _logger.LogError(ex.Message);
+
                 throw;
             }
         }
 
+        // Verifica password Login
         [HttpPost("Jwt")]
         public async Task<IActionResult> GetToken(User user)
         {
             try
-            {     
+            {
                 Customer customer = _customerHandler.GetCustomer(user.Email);
 
                 if (customer.PasswordHash != user.Password)
                     throw new Exception("Password errata");
 
-                return Ok(_jwtManager.GenerateJwtToken(customer));
+                _logger.LogInformation("Login effettuato");
+
+                return Ok(new {Token = JwtManager.GenerateJwtToken(customer, _jwt.SecretKey, _jwt.Issuer, _jwt.Audience) });
             }
 
             catch (Exception ex)
             {
-                return BadRequest(new
-                {
-                    message = "Si è verificato un errore durante l'elaborazione della richiesta.",
-                    errorDetails = ex.Message,
-                    statusCode = StatusCodes.Status400BadRequest,
-                    traceId = Guid.NewGuid()
-                });
+                _logger.LogError(ex.Message);
+
+                throw;
             }
+        }
+
+        [HttpGet("GetSalt/{email}")]
+        public async Task<ActionResult> GetCustomer(string email)
+        {
+            if (_context.Customers == null)
+            {
+                return NotFound();
+            }
+            var customer = await _context.Customers
+                .Where(c => c.EmailAddress == email)
+                .FirstOrDefaultAsync();
+
+            if (customer == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(new {Salt = customer.PasswordSalt });
         }
     }
 }

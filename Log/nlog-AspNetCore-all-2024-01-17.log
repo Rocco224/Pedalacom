@@ -1,0 +1,314 @@
+2024-01-17 09:37:49.9680|12|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+2024-01-17 09:37:50.4659|1|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting 
+2024-01-17 09:37:50.5911|63|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\Rocco\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2024-01-17 09:37:50.6003|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Rocco\AppData\Local\ASP.NET\DataProtection-Keys\key-c00fb70e-7b76-4f55-9134-e118e2384b3c.xml'. 
+2024-01-17 09:37:50.6450|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {c00fb70e-7b76-4f55-9134-e118e2384b3c}. 
+2024-01-17 09:37:50.6599|13|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver|Considering key {c00fb70e-7b76-4f55-9134-e118e2384b3c} with expiration date 2024-04-14 10:07:00Z as default key. 
+2024-01-17 09:37:50.6599|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2024-01-17 09:37:50.6599|51|DEBUG|Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor|Decrypting secret element using Windows DPAPI. 
+2024-01-17 09:37:50.6599|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2024-01-17 09:37:50.6716|4|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC. 
+2024-01-17 09:37:50.6716|3|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC. 
+2024-01-17 09:37:50.6716|2|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider|Using key {c00fb70e-7b76-4f55-9134-e118e2384b3c} as the default key. 
+2024-01-17 09:37:50.6716|65|DEBUG|Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService|Key ring with default key {c00fb70e-7b76-4f55-9134-e118e2384b3c} was loaded during application startup. 
+2024-01-17 09:37:51.1383|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5150 
+2024-01-17 09:37:51.1523|13|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly Pedalacom 
+2024-01-17 09:37:51.1523|13|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh 
+2024-01-17 09:37:51.1523|13|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net 
+2024-01-17 09:37:51.1523|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2024-01-17 09:37:51.1523|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2024-01-17 09:37:51.1523|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Rocco\source\repos\Pedalacom 
+2024-01-17 09:37:51.1523|2|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started 
+2024-01-17 09:37:51.3340|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN0N6UBP3N7O" accepted. 
+2024-01-17 09:37:51.3340|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN0N6UBP3N7O" started. 
+2024-01-17 09:37:51.3340|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN0N6UBP3N7P" accepted. 
+2024-01-17 09:37:51.3340|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN0N6UBP3N7P" started. 
+2024-01-17 09:37:51.3531|6|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN0N6UBP3N7P" received FIN. 
+2024-01-17 09:37:51.3531|6|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN0N6UBP3N7O" received FIN. 
+2024-01-17 09:37:51.3531|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN0N6UBP3N7P" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2024-01-17 09:37:51.3531|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN0N6UBP3N7O" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2024-01-17 09:37:51.3531|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN0N6UBP3N7P" disconnecting. 
+2024-01-17 09:37:51.3531|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN0N6UBP3N7O" disconnecting. 
+2024-01-17 09:37:51.3580|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN0N6UBP3N7O" stopped. 
+2024-01-17 09:37:51.3580|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN0N6UBP3N7P" stopped. 
+2024-01-17 09:37:51.7358|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN0N6UBP3N7Q" accepted. 
+2024-01-17 09:37:51.7358|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN0N6UBP3N7R" accepted. 
+2024-01-17 09:37:51.7358|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN0N6UBP3N7Q" started. 
+2024-01-17 09:37:51.7358|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN0N6UBP3N7R" started. 
+2024-01-17 09:37:51.8335|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5150/swagger/index.html - - 
+2024-01-17 09:37:51.8934|0|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed. 
+2024-01-17 09:37:51.8934|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2024-01-17 09:37:51.9268|1000|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/index.html' 
+2024-01-17 09:37:51.9268|2|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2024-01-17 09:37:52.1538|1|DEBUG|Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware|Response markup is scheduled to include browser refresh script injection. 
+2024-01-17 09:37:52.3664|2|DEBUG|Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware|Response markup was updated to include browser refresh script injection. 
+2024-01-17 09:37:52.3664|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN0N6UBP3N7R" completed keep alive response. 
+2024-01-17 09:37:52.3664|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5150/swagger/index.html - - - 200 - text/html;charset=utf-8 536.1560ms 
+2024-01-17 09:37:52.4197|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5150/_vs/browserLink - - 
+2024-01-17 09:37:52.4203|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5150/_framework/aspnetcore-browser-refresh.js - - 
+2024-01-17 09:37:52.4203|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN0N6UBP3N7Q" completed keep alive response. 
+2024-01-17 09:37:52.4203|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5150/_framework/aspnetcore-browser-refresh.js - - - 200 12350 application/javascript;+charset=utf-8 2.5429ms 
+2024-01-17 09:37:52.4716|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN0N6UBP3N7R" completed keep alive response. 
+2024-01-17 09:37:52.4716|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5150/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 51.9856ms 
+2024-01-17 09:37:52.5882|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5150/swagger/v1/swagger.json - - 
+2024-01-17 09:37:52.5882|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2024-01-17 09:37:52.5882|1000|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/v1/swagger.json' 
+2024-01-17 09:37:52.5882|2|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2024-01-17 09:37:52.7822|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN0N6UBP3N7R" completed keep alive response. 
+2024-01-17 09:37:52.7822|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5150/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 194.1452ms 
+2024-01-17 09:38:00.5193|6|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN0N6UBP3N7Q" received FIN. 
+2024-01-17 09:38:00.5193|6|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN0N6UBP3N7R" received FIN. 
+2024-01-17 09:38:00.5193|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN0N6UBP3N7Q" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2024-01-17 09:38:00.5193|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN0N6UBP3N7R" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2024-01-17 09:38:00.5193|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN0N6UBP3N7Q" disconnecting. 
+2024-01-17 09:38:00.5193|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN0N6UBP3N7R" disconnecting. 
+2024-01-17 09:38:00.5193|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN0N6UBP3N7R" stopped. 
+2024-01-17 09:38:00.5323|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN0N6UBP3N7Q" stopped. 
+2024-01-17 09:38:55.2810|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN0N6UBP3N7S" accepted. 
+2024-01-17 09:38:55.2810|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN0N6UBP3N7S" started. 
+2024-01-17 09:38:55.2810|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5150/api/Customers - - 
+2024-01-17 09:38:55.2810|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2024-01-17 09:38:55.2976|1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/Customers' 
+2024-01-17 09:38:55.2976|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Pedalacom.Controllers.CustomersController.GetCustomers (Pedalacom)' with route pattern 'api/Customers' is valid for the request path '/api/Customers' 
+2024-01-17 09:38:55.2976|1|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'Pedalacom.Controllers.CustomersController.GetCustomers (Pedalacom)' 
+2024-01-17 09:38:55.3113|15|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Static files was skipped as the request already matched an endpoint. 
+2024-01-17 09:38:55.3113|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. 
+2024-01-17 09:38:55.3113|2|DEBUG|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|The request has an origin header: 'http://localhost:4200'. 
+2024-01-17 09:38:55.3113|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2024-01-17 09:38:55.5341|9|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated. 
+2024-01-17 09:38:55.5341|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Pedalacom.Controllers.CustomersController.GetCustomers (Pedalacom)' 
+2024-01-17 09:38:55.5560|102|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetCustomers", controller = "Customers"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Pedalacom.Models.CustomerModel.Customer]]] GetCustomers() on controller Pedalacom.Controllers.CustomersController (Pedalacom). 
+2024-01-17 09:38:55.5560|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2024-01-17 09:38:55.5560|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2024-01-17 09:38:55.5560|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2024-01-17 09:38:55.5560|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2024-01-17 09:38:55.5560|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2024-01-17 09:38:55.5560|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller Pedalacom.Controllers.CustomersController (Pedalacom) 
+2024-01-17 09:38:55.8085|10401|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|An 'IServiceProvider' was created for internal use by Entity Framework. 
+2024-01-17 09:38:55.8321|2|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller Pedalacom.Controllers.CustomersController (Pedalacom) 
+2024-01-17 09:38:55.8321|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-01-17 09:38:55.8321|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-01-17 09:38:55.8321|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-01-17 09:38:55.8321|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-01-17 09:38:55.8321|101|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Pedalacom.Controllers.CustomersController.GetCustomers (Pedalacom) - Validation state: Valid 
+2024-01-17 09:38:56.2082|10607|DEBUG|Microsoft.EntityFrameworkCore.Model|No relationship from 'Address' to 'SalesOrderHeader' has been configured by convention because there are multiple properties on one entity type - {'SalesOrderHeaderBillToAddresses', 'SalesOrderHeaderShipToAddresses'} that could be matched with the properties on the other entity type - {'BillToAddress', 'ShipToAddress'}. This message can be disregarded if explicit configuration has been specified in 'OnModelCreating'. 
+2024-01-17 09:38:56.2906|10607|DEBUG|Microsoft.EntityFrameworkCore.Model|No relationship from 'SalesOrderHeader' to 'Address' has been configured by convention because there are multiple properties on one entity type - {'BillToAddress', 'ShipToAddress'} that could be matched with the properties on the other entity type - {'SalesOrderHeaderBillToAddresses', 'SalesOrderHeaderShipToAddresses'}. This message can be disregarded if explicit configuration has been specified in 'OnModelCreating'. 
+2024-01-17 09:38:56.5715|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN0N6UBP3N7T" accepted. 
+2024-01-17 09:38:56.5715|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN0N6UBP3N7T" started. 
+2024-01-17 09:38:56.5715|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5150/api/SalesOrderHeaders - - 
+2024-01-17 09:38:56.5715|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2024-01-17 09:38:56.5780|1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/SalesOrderHeaders' 
+2024-01-17 09:38:56.5780|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Pedalacom.Controllers.SalesOrderHeadersController.GetSalesOrderHeaders (Pedalacom)' with route pattern 'api/SalesOrderHeaders' is valid for the request path '/api/SalesOrderHeaders' 
+2024-01-17 09:38:56.5780|1|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'Pedalacom.Controllers.SalesOrderHeadersController.GetSalesOrderHeaders (Pedalacom)' 
+2024-01-17 09:38:56.5780|15|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Static files was skipped as the request already matched an endpoint. 
+2024-01-17 09:38:56.5780|2|DEBUG|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|The request has an origin header: 'http://localhost:4200'. 
+2024-01-17 09:38:56.5780|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2024-01-17 09:38:56.5780|9|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated. 
+2024-01-17 09:38:56.5780|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Pedalacom.Controllers.SalesOrderHeadersController.GetSalesOrderHeaders (Pedalacom)' 
+2024-01-17 09:38:56.5780|102|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetSalesOrderHeaders", controller = "SalesOrderHeaders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Pedalacom.Models.OrderModel.SalesOrderHeader]]] GetSalesOrderHeaders() on controller Pedalacom.Controllers.SalesOrderHeadersController (Pedalacom). 
+2024-01-17 09:38:56.5780|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2024-01-17 09:38:56.5780|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2024-01-17 09:38:56.5780|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2024-01-17 09:38:56.5780|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2024-01-17 09:38:56.5780|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2024-01-17 09:38:56.5780|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller Pedalacom.Controllers.SalesOrderHeadersController (Pedalacom) 
+2024-01-17 09:38:56.5914|2|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller Pedalacom.Controllers.SalesOrderHeadersController (Pedalacom) 
+2024-01-17 09:38:56.5914|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-01-17 09:38:56.5914|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-01-17 09:38:56.5914|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-01-17 09:38:56.5914|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-01-17 09:38:56.5914|101|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Pedalacom.Controllers.SalesOrderHeadersController.GetSalesOrderHeaders (Pedalacom) - Validation state: Valid 
+2024-01-17 09:38:56.5914|10607|DEBUG|Microsoft.EntityFrameworkCore.Model|No relationship from 'SalesOrderHeader' to 'Address' has been configured by convention because there are multiple properties on one entity type - {'BillToAddress', 'ShipToAddress'} that could be matched with the properties on the other entity type - {'SalesOrderHeaderBillToAddresses', 'SalesOrderHeaderShipToAddresses'}. This message can be disregarded if explicit configuration has been specified in 'OnModelCreating'. 
+2024-01-17 09:38:56.5914|10607|DEBUG|Microsoft.EntityFrameworkCore.Model|No relationship from 'Address' to 'SalesOrderHeader' has been configured by convention because there are multiple properties on one entity type - {'SalesOrderHeaderBillToAddresses', 'SalesOrderHeaderShipToAddresses'} that could be matched with the properties on the other entity type - {'BillToAddress', 'ShipToAddress'}. This message can be disregarded if explicit configuration has been specified in 'OnModelCreating'. 
+2024-01-17 09:38:56.6517|10601|DEBUG|Microsoft.EntityFrameworkCore.Model|The index {'CustomerId'} was not created on entity type 'CustomerAddress' as the properties are already covered by the index {'CustomerId', 'AddressId'}. 
+2024-01-17 09:38:56.6517|10601|DEBUG|Microsoft.EntityFrameworkCore.Model|The index {'SalesOrderId'} was not created on entity type 'SalesOrderDetail' as the properties are already covered by the index {'SalesOrderId', 'SalesOrderDetailId'}. 
+2024-01-17 09:38:56.6517|10601|DEBUG|Microsoft.EntityFrameworkCore.Model|The index {'ProductModelId'} was not created on entity type 'ProductModelProductDescription' as the properties are already covered by the index {'ProductModelId', 'ProductDescriptionId', 'Culture'}. 
+2024-01-17 09:38:56.8400|30001|WARN|Microsoft.EntityFrameworkCore.Model.Validation|The property 'SystemInformationId' on entity type 'BuildVersion' is of type 'byte', but is set up to use a SQL Server identity column; this requires that values starting at 255 and counting down will be used for temporary key values. A temporary key value is needed for every entity inserted in a single call to 'SaveChanges'. Care must be taken that these values do not collide with real key values. 
+2024-01-17 09:38:57.0238|10403|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 7.0.14 initialized 'AdventureWorks2019Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:7.0.14' with options: None 
+2024-01-17 09:38:57.0238|10403|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 7.0.14 initialized 'AdventureWorks2019Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:7.0.14' with options: None 
+2024-01-17 09:38:57.0760|10111|DEBUG|Microsoft.EntityFrameworkCore.Query|Compiling query expression: 
+'DbSet<SalesOrderHeader>()' 
+2024-01-17 09:38:57.0760|10111|DEBUG|Microsoft.EntityFrameworkCore.Query|Compiling query expression: 
+'DbSet<Customer>()
+    .Include(emp => emp.CustomerAddresses)
+    .Include(emp => emp.SalesOrderHeaders)' 
+2024-01-17 09:38:57.1470|10112|DEBUG|Microsoft.EntityFrameworkCore.Query|Including navigation: 'Customer.CustomerAddresses'. 
+2024-01-17 09:38:57.1470|10112|DEBUG|Microsoft.EntityFrameworkCore.Query|Including navigation: 'Customer.SalesOrderHeaders'. 
+2024-01-17 09:38:57.2466|10107|DEBUG|Microsoft.EntityFrameworkCore.Query|Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<SalesOrderHeader>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: SalesOrderHeader.SalesOrderId (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: SalesOrderHeader.AccountNumber (string) MaxLength(15), 1], [Property: SalesOrderHeader.BillToAddressId (int?) FK Index, 2], [Property: SalesOrderHeader.Comment (string), 3], [Property: SalesOrderHeader.CreditCardApprovalCode (string) MaxLength(15) Ansi, 4], [Property: SalesOrderHeader.CustomerId (int) Required FK Index, 5], [Property: SalesOrderHeader.DueDate (DateTime) Required, 6], [Property: SalesOrderHeader.Freight (decimal) Required ValueGenerated.OnAdd, 7], [Property: SalesOrderHeader.ModifiedDate (DateTime) Required ValueGenerated.OnAdd, 8], [Property: SalesOrderHeader.OnlineOrderFlag (bool?) Required ValueGenerated.OnAdd, 9], [Property: SalesOrderHeader.OrderDate (DateTime) Required ValueGenerated.OnAdd, 10], [Property: SalesOrderHeader.PurchaseOrderNumber (string) MaxLength(25), 11], [Property: SalesOrderHeader.RevisionNumber (byte) Required, 12], [Property: SalesOrderHeader.Rowguid (Guid) Required Index ValueGenerated.OnAdd, 13], [Property: SalesOrderHeader.SalesOrderNumber (string) Required Index BeforeSave:Ignore AfterSave:Ignore ValueGenerated.OnAddOrUpdate MaxLength(25), 14], [Property: SalesOrderHeader.ShipDate (DateTime?), 15], [Property: SalesOrderHeader.ShipMethod (string) Required MaxLength(50), 16], [Property: SalesOrderHeader.ShipToAddressId (int?) FK Index, 17], [Property: SalesOrderHeader.Status (byte) Required ValueGenerated.OnAdd, 18], [Property: SalesOrderHeader.SubTotal (decimal) Required ValueGenerated.OnAdd, 19], [Property: SalesOrderHeader.TaxAmt (decimal) Required ValueGenerated.OnAdd, 20], [Property: SalesOrderHeader.TotalDue (decimal) Required BeforeSave:Ignore AfterSave:Ignore ValueGenerated.OnAddOrUpdate, 21] }
+        SELECT s.SalesOrderID, s.AccountNumber, s.BillToAddressID, s.Comment, s.CreditCardApprovalCode, s.CustomerID, s.DueDate, s.Freight, s.ModifiedDate, s.OnlineOrderFlag, s.OrderDate, s.PurchaseOrderNumber, s.RevisionNumber, s.rowguid, s.SalesOrderNumber, s.ShipDate, s.ShipMethod, s.ShipToAddressID, s.Status, s.SubTotal, s.TaxAmt, s.TotalDue
+        FROM SalesLT.SalesOrderHeader AS s), 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, SalesOrderHeader>, 
+    Pedalacom.Data.AdventureWorks2019Context, 
+    False, 
+    False, 
+    True
+)' 
+2024-01-17 09:38:57.2904|20504|WARN|Microsoft.EntityFrameworkCore.Query|Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'. 
+2024-01-17 09:38:57.2904|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2024-01-17 09:38:57.2964|20005|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Creating DbConnection. 
+2024-01-17 09:38:57.2964|10107|DEBUG|Microsoft.EntityFrameworkCore.Query|Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<Customer>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.QueryExpression(
+        Client Projections:
+            0 -> Dictionary<IProperty, int> { [Property: Customer.CustomerId (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Customer.CompanyName (string) MaxLength(128), 1], [Property: Customer.EmailAddress (string) Required Index MaxLength(50), 2], [Property: Customer.FirstName (string) Required MaxLength(50), 3], [Property: Customer.LastName (string) Required MaxLength(50), 4], [Property: Customer.MiddleName (string) MaxLength(50), 5], [Property: Customer.ModifiedDate (DateTime) Required ValueGenerated.OnAdd, 6], [Property: Customer.NameStyle (bool) Required, 7], [Property: Customer.PasswordHash (string) Required MaxLength(128) Ansi, 8], [Property: Customer.PasswordSalt (string) Required MaxLength(10) Ansi, 9], [Property: Customer.Phone (string) MaxLength(25), 10], [Property: Customer.Role (string) Required MaxLength(10), 11], [Property: Customer.Rowguid (Guid) Required Index ValueGenerated.OnAdd, 12], [Property: Customer.SalesPerson (string) MaxLength(256), 13], [Property: Customer.Suffix (string) MaxLength(10), 14], [Property: Customer.Title (string) MaxLength(8), 15], [Property: Customer.Valid (byte?), 16] }
+            1 -> 0
+            2 -> Dictionary<IProperty, int> { [Property: CustomerAddress.CustomerId (int) Required PK FK AfterSave:Throw, 17], [Property: CustomerAddress.AddressId (int) Required PK FK Index AfterSave:Throw, 18], [Property: CustomerAddress.AddressType (string) Required MaxLength(50), 19], [Property: CustomerAddress.ModifiedDate (DateTime) Required ValueGenerated.OnAdd, 20], [Property: CustomerAddress.Rowguid (Guid) Required Index ValueGenerated.OnAdd, 21] }
+            3 -> 17
+            4 -> 18
+            5 -> Dictionary<IProperty, int> { [Property: SalesOrderHeader.SalesOrderId (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 22], [Property: SalesOrderHeader.AccountNumber (string) MaxLength(15), 23], [Property: SalesOrderHeader.BillToAddressId (int?) FK Index, 24], [Property: SalesOrderHeader.Comment (string), 25], [Property: SalesOrderHeader.CreditCardApprovalCode (string) MaxLength(15) Ansi, 26], [Property: SalesOrderHeader.CustomerId (int) Required FK Index, 27], [Property: SalesOrderHeader.DueDate (DateTime) Required, 28], [Property: SalesOrderHeader.Freight (decimal) Required ValueGenerated.OnAdd, 29], [Property: SalesOrderHeader.ModifiedDate (DateTime) Required ValueGenerated.OnAdd, 30], [Property: SalesOrderHeader.OnlineOrderFlag (bool?) Required ValueGenerated.OnAdd, 31], [Property: SalesOrderHeader.OrderDate (DateTime) Required ValueGenerated.OnAdd, 32], [Property: SalesOrderHeader.PurchaseOrderNumber (string) MaxLength(25), 33], [Property: SalesOrderHeader.RevisionNumber (byte) Required, 34], [Property: SalesOrderHeader.Rowguid (Guid) Required Index ValueGenerated.OnAdd, 35], [Property: SalesOrderHeader.SalesOrderNumber (string) Required Index BeforeSave:Ignore AfterSave:Ignore ValueGenerated.OnAddOrUpdate MaxLength(25), 36], [Property: SalesOrderHeader.ShipDate (DateTime?), 37], [Property: SalesOrderHeader.ShipMethod (string) Required MaxLength(50), 38], [Property: SalesOrderHeader.ShipToAddressId (int?) FK Index, 39], [Property: SalesOrderHeader.Status (byte) Required ValueGenerated.OnAdd, 40], [Property: SalesOrderHeader.SubTotal (decimal) Required ValueGenerated.OnAdd, 41], [Property: SalesOrderHeader.TaxAmt (decimal) Required ValueGenerated.OnAdd, 42], [Property: SalesOrderHeader.TotalDue (decimal) Required BeforeSave:Ignore AfterSave:Ignore ValueGenerated.OnAddOrUpdate, 43] }
+            6 -> 22
+        SELECT c.CustomerID, c.CompanyName, c.EmailAddress, c.FirstName, c.LastName, c.MiddleName, c.ModifiedDate, c.NameStyle, c.PasswordHash, c.PasswordSalt, c.Phone, c.Role, c.rowguid, c.SalesPerson, c.Suffix, c.Title, c.Valid, c0.CustomerID, c0.AddressID, c0.AddressType, c0.ModifiedDate, c0.rowguid, s.SalesOrderID, s.AccountNumber, s.BillToAddressID, s.Comment, s.CreditCardApprovalCode, s.CustomerID, s.DueDate, s.Freight, s.ModifiedDate, s.OnlineOrderFlag, s.OrderDate, s.PurchaseOrderNumber, s.RevisionNumber, s.rowguid, s.SalesOrderNumber, s.ShipDate, s.ShipMethod, s.ShipToAddressID, s.Status, s.SubTotal, s.TaxAmt, s.TotalDue
+        FROM SalesLT.Customer AS c
+        LEFT JOIN SalesLT.CustomerAddress AS c0 ON c.CustomerID == c0.CustomerID
+        LEFT JOIN SalesLT.SalesOrderHeader AS s ON c.CustomerID == s.CustomerID
+        ORDER BY c.CustomerID ASC, c0.CustomerID ASC, c0.AddressID ASC), 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Customer>, 
+    Pedalacom.Data.AdventureWorks2019Context, 
+    False, 
+    False, 
+    True
+)' 
+2024-01-17 09:38:57.2964|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2024-01-17 09:38:57.3104|20005|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Creating DbConnection. 
+2024-01-17 09:38:57.3104|20006|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Created DbConnection. (8ms). 
+2024-01-17 09:38:57.3104|20006|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Created DbConnection. (24ms). 
+2024-01-17 09:38:57.3313|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (34ms). 
+2024-01-17 09:38:57.3313|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (17ms). 
+2024-01-17 09:38:57.3313|20106|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteReader' (39ms). 
+2024-01-17 09:38:57.3313|20106|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteReader' (23ms). 
+2024-01-17 09:38:57.3313|20000|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'AdventureWorks2019' on server '.\SQLEXPRESS'. 
+2024-01-17 09:38:57.3313|20000|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'AdventureWorks2019' on server '.\SQLEXPRESS'. 
+2024-01-17 09:38:58.2122|20001|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'AdventureWorks2019' on server '.\SQLEXPRESS'. 
+2024-01-17 09:38:58.2122|20001|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'AdventureWorks2019' on server '.\SQLEXPRESS'. 
+2024-01-17 09:38:58.2301|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[SalesOrderID], [s].[AccountNumber], [s].[BillToAddressID], [s].[Comment], [s].[CreditCardApprovalCode], [s].[CustomerID], [s].[DueDate], [s].[Freight], [s].[ModifiedDate], [s].[OnlineOrderFlag], [s].[OrderDate], [s].[PurchaseOrderNumber], [s].[RevisionNumber], [s].[rowguid], [s].[SalesOrderNumber], [s].[ShipDate], [s].[ShipMethod], [s].[ShipToAddressID], [s].[Status], [s].[SubTotal], [s].[TaxAmt], [s].[TotalDue]
+FROM [SalesLT].[SalesOrderHeader] AS [s] 
+2024-01-17 09:38:58.2301|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CustomerID], [c].[CompanyName], [c].[EmailAddress], [c].[FirstName], [c].[LastName], [c].[MiddleName], [c].[ModifiedDate], [c].[NameStyle], [c].[PasswordHash], [c].[PasswordSalt], [c].[Phone], [c].[Role], [c].[rowguid], [c].[SalesPerson], [c].[Suffix], [c].[Title], [c].[Valid], [c0].[CustomerID], [c0].[AddressID], [c0].[AddressType], [c0].[ModifiedDate], [c0].[rowguid], [s].[SalesOrderID], [s].[AccountNumber], [s].[BillToAddressID], [s].[Comment], [s].[CreditCardApprovalCode], [s].[CustomerID], [s].[DueDate], [s].[Freight], [s].[ModifiedDate], [s].[OnlineOrderFlag], [s].[OrderDate], [s].[PurchaseOrderNumber], [s].[RevisionNumber], [s].[rowguid], [s].[SalesOrderNumber], [s].[ShipDate], [s].[ShipMethod], [s].[ShipToAddressID], [s].[Status], [s].[SubTotal], [s].[TaxAmt], [s].[TotalDue]
+FROM [SalesLT].[Customer] AS [c]
+LEFT JOIN [SalesLT].[CustomerAddress] AS [c0] ON [c].[CustomerID] = [c0].[CustomerID]
+LEFT JOIN [SalesLT].[SalesOrderHeader] AS [s] ON [c].[CustomerID] = [s].[CustomerID]
+ORDER BY [c].[CustomerID], [c0].[CustomerID], [c0].[AddressID] 
+2024-01-17 09:38:58.3600|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (129ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[SalesOrderID], [s].[AccountNumber], [s].[BillToAddressID], [s].[Comment], [s].[CreditCardApprovalCode], [s].[CustomerID], [s].[DueDate], [s].[Freight], [s].[ModifiedDate], [s].[OnlineOrderFlag], [s].[OrderDate], [s].[PurchaseOrderNumber], [s].[RevisionNumber], [s].[rowguid], [s].[SalesOrderNumber], [s].[ShipDate], [s].[ShipMethod], [s].[ShipToAddressID], [s].[Status], [s].[SubTotal], [s].[TaxAmt], [s].[TotalDue]
+FROM [SalesLT].[SalesOrderHeader] AS [s] 
+2024-01-17 09:38:58.4506|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'AdventureWorks2019Context' started tracking 'SalesOrderHeader' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2024-01-17 09:38:58.5553|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'AdventureWorks2019Context' started tracking 'SalesOrderHeader' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2024-01-17 09:38:58.5553|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'AdventureWorks2019Context' started tracking 'SalesOrderHeader' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2024-01-17 09:38:58.5553|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'AdventureWorks2019Context' started tracking 'SalesOrderHeader' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2024-01-17 09:38:58.5553|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'AdventureWorks2019Context' started tracking 'SalesOrderHeader' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2024-01-17 09:38:58.5553|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'AdventureWorks2019Context' started tracking 'SalesOrderHeader' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2024-01-17 09:38:58.5553|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'AdventureWorks2019Context' started tracking 'SalesOrderHeader' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2024-01-17 09:38:58.5553|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'AdventureWorks2019Context' started tracking 'SalesOrderHeader' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2024-01-17 09:38:58.5553|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'AdventureWorks2019Context' started tracking 'SalesOrderHeader' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2024-01-17 09:38:58.5553|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'AdventureWorks2019Context' started tracking 'SalesOrderHeader' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2024-01-17 09:38:58.5553|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'AdventureWorks2019Context' started tracking 'SalesOrderHeader' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2024-01-17 09:38:58.5553|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'AdventureWorks2019Context' started tracking 'SalesOrderHeader' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2024-01-17 09:38:58.5553|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'AdventureWorks2019Context' started tracking 'SalesOrderHeader' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2024-01-17 09:38:58.5553|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'AdventureWorks2019Context' started tracking 'SalesOrderHeader' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2024-01-17 09:38:58.5553|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'AdventureWorks2019Context' started tracking 'SalesOrderHeader' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2024-01-17 09:38:58.5553|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'AdventureWorks2019Context' started tracking 'SalesOrderHeader' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2024-01-17 09:38:58.5553|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'AdventureWorks2019Context' started tracking 'SalesOrderHeader' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2024-01-17 09:38:58.5553|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'AdventureWorks2019Context' started tracking 'SalesOrderHeader' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2024-01-17 09:38:58.5553|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'AdventureWorks2019Context' started tracking 'SalesOrderHeader' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2024-01-17 09:38:58.5553|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'AdventureWorks2019Context' started tracking 'SalesOrderHeader' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2024-01-17 09:38:58.5553|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'AdventureWorks2019Context' started tracking 'SalesOrderHeader' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2024-01-17 09:38:58.5553|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'AdventureWorks2019Context' started tracking 'SalesOrderHeader' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2024-01-17 09:38:58.5553|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'AdventureWorks2019Context' started tracking 'SalesOrderHeader' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2024-01-17 09:38:58.5553|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'AdventureWorks2019Context' started tracking 'SalesOrderHeader' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2024-01-17 09:38:58.5553|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'AdventureWorks2019Context' started tracking 'SalesOrderHeader' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2024-01-17 09:38:58.5553|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'AdventureWorks2019Context' started tracking 'SalesOrderHeader' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2024-01-17 09:38:58.5553|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'AdventureWorks2019Context' started tracking 'SalesOrderHeader' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2024-01-17 09:38:58.5553|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'AdventureWorks2019Context' started tracking 'SalesOrderHeader' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2024-01-17 09:38:58.5553|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'AdventureWorks2019Context' started tracking 'SalesOrderHeader' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2024-01-17 09:38:58.5553|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'AdventureWorks2019Context' started tracking 'SalesOrderHeader' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2024-01-17 09:38:58.5553|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'AdventureWorks2019Context' started tracking 'SalesOrderHeader' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2024-01-17 09:38:58.5553|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'AdventureWorks2019Context' started tracking 'SalesOrderHeader' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2024-01-17 09:38:58.5553|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'AdventureWorks2019Context' started tracking 'SalesOrderHeader' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2024-01-17 09:38:58.5638|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'AdventureWorks2019Context' started tracking 'SalesOrderHeader' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2024-01-17 09:38:58.5638|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'AdventureWorks2019Context' started tracking 'SalesOrderHeader' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2024-01-17 09:38:58.5638|20301|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Closing data reader to 'AdventureWorks2019' on server '.\SQLEXPRESS'. 
+2024-01-17 09:38:58.5638|20300|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader for 'AdventureWorks2019' on server '.\SQLEXPRESS' is being disposed after spending 208ms reading results. 
+2024-01-17 09:38:58.5765|20002|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'AdventureWorks2019' on server '.\SQLEXPRESS'. 
+2024-01-17 09:38:58.5765|20003|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'AdventureWorks2019' on server '.\SQLEXPRESS' (5ms). 
+2024-01-17 09:38:58.5765|103|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method Pedalacom.Controllers.SalesOrderHeadersController.GetSalesOrderHeaders (Pedalacom), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1990.8292ms. 
+2024-01-17 09:38:58.5765|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-01-17 09:38:58.5765|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-01-17 09:38:58.5765|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-01-17 09:38:58.5765|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-01-17 09:38:58.5765|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-01-17 09:38:58.5765|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-01-17 09:38:58.5765|5|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.ObjectResult. 
+2024-01-17 09:38:58.5765|11|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter 
+2024-01-17 09:38:58.5765|4|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation. 
+2024-01-17 09:38:58.5765|8|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2024-01-17 09:38:58.5765|10|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result. 
+2024-01-17 09:38:58.5765|2|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response. 
+2024-01-17 09:38:58.5765|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Pedalacom.Models.OrderModel.SalesOrderHeader, Pedalacom, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2024-01-17 09:38:58.6708|6|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.ObjectResult. 
+2024-01-17 09:38:58.6708|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-01-17 09:38:58.6708|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-01-17 09:38:58.6708|105|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Pedalacom.Controllers.SalesOrderHeadersController.GetSalesOrderHeaders (Pedalacom) in 2081.5765ms 
+2024-01-17 09:38:58.6708|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Pedalacom.Controllers.SalesOrderHeadersController.GetSalesOrderHeaders (Pedalacom)' 
+2024-01-17 09:38:58.6708|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN0N6UBP3N7T" completed keep alive response. 
+2024-01-17 09:38:58.6708|10407|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'AdventureWorks2019Context' disposed. 
+2024-01-17 09:38:58.6708|20007|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Disposing connection to database 'AdventureWorks2019' on server '.\SQLEXPRESS'. 
+2024-01-17 09:38:58.6708|20008|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Disposed connection to database '' on server '' (1ms). 
+2024-01-17 09:38:58.6856|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5150/api/SalesOrderHeaders - - - 200 - application/json;+charset=utf-8 2113.1438ms 
+2024-01-17 09:39:00.5966|6|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN0N6UBP3N7T" received FIN. 
+2024-01-17 09:39:00.5966|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN0N6UBP3N7T" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2024-01-17 09:39:00.5966|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN0N6UBP3N7T" disconnecting. 
+2024-01-17 09:39:00.6120|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN0N6UBP3N7T" stopped. 
+2024-01-17 09:39:23.3837|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (25,167ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CustomerID], [c].[CompanyName], [c].[EmailAddress], [c].[FirstName], [c].[LastName], [c].[MiddleName], [c].[ModifiedDate], [c].[NameStyle], [c].[PasswordHash], [c].[PasswordSalt], [c].[Phone], [c].[Role], [c].[rowguid], [c].[SalesPerson], [c].[Suffix], [c].[Title], [c].[Valid], [c0].[CustomerID], [c0].[AddressID], [c0].[AddressType], [c0].[ModifiedDate], [c0].[rowguid], [s].[SalesOrderID], [s].[AccountNumber], [s].[BillToAddressID], [s].[Comment], [s].[CreditCardApprovalCode], [s].[CustomerID], [s].[DueDate], [s].[Freight], [s].[ModifiedDate], [s].[OnlineOrderFlag], [s].[OrderDate], [s].[PurchaseOrderNumber], [s].[RevisionNumber], [s].[rowguid], [s].[SalesOrderNumber], [s].[ShipDate], [s].[ShipMethod], [s].[ShipToAddressID], [s].[Status], [s].[SubTotal], [s].[TaxAmt], [s].[TotalDue]
+FROM [SalesLT].[Customer] AS [c]
+LEFT JOIN [SalesLT].[CustomerAddress] AS [c0] ON [c].[CustomerID] = [c0].[CustomerID]
+LEFT JOIN [SalesLT].[SalesOrderHeader] AS [s] ON [c].[CustomerID] = [s].[CustomerID]
+ORDER BY [c].[CustomerID], [c0].[CustomerID], [c0].[AddressID] 
+2024-01-17 09:39:23.5311|10100|ERROR|Microsoft.EntityFrameworkCore.Query|An exception occurred while iterating over the results of a query for context type 'Pedalacom.Data.AdventureWorks2019Context'.
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.ThrowIfNull()
+   at Microsoft.Data.SqlClient.SqlBuffer.get_String()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method58(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync() System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.ThrowIfNull()
+   at Microsoft.Data.SqlClient.SqlBuffer.get_String()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method58(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2024-01-17 09:39:23.5538|20301|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Closing data reader to 'AdventureWorks2019' on server '.\SQLEXPRESS'. 
+2024-01-17 09:39:23.5627|20300|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader for 'AdventureWorks2019' on server '.\SQLEXPRESS' is being disposed after spending 178ms reading results. 
+2024-01-17 09:39:23.5627|20002|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'AdventureWorks2019' on server '.\SQLEXPRESS'. 
+2024-01-17 09:39:23.5627|20003|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'AdventureWorks2019' on server '.\SQLEXPRESS' (0ms). 
+2024-01-17 09:39:23.5627|103|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method Pedalacom.Controllers.CustomersController.GetCustomers (Pedalacom), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 27729.1711ms. 
+2024-01-17 09:39:23.5627|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-01-17 09:39:23.5627|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-01-17 09:39:23.5627|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-01-17 09:39:23.5627|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-01-17 09:39:23.5627|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-01-17 09:39:23.5627|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-01-17 09:39:23.5627|5|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.ObjectResult. 
+2024-01-17 09:39:23.5627|11|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter 
+2024-01-17 09:39:23.5627|4|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation. 
+2024-01-17 09:39:23.5627|9|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first output formatter in the output formatters list which supports a content type from the explicitly specified content types 'application/problem+json, application/problem+xml'. 
+2024-01-17 09:39:23.5627|2|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/problem+json' to write the response. 
+2024-01-17 09:39:23.5627|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'. 
+2024-01-17 09:39:23.5627|6|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.ObjectResult. 
+2024-01-17 09:39:23.5627|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-01-17 09:39:23.5627|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-01-17 09:39:23.5627|105|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Pedalacom.Controllers.CustomersController.GetCustomers (Pedalacom) in 28012.0077ms 
+2024-01-17 09:39:23.5627|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Pedalacom.Controllers.CustomersController.GetCustomers (Pedalacom)' 
+2024-01-17 09:39:23.5627|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN0N6UBP3N7S" completed keep alive response. 
+2024-01-17 09:39:23.5627|10407|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'AdventureWorks2019Context' disposed. 
+2024-01-17 09:39:23.5627|20007|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Disposing connection to database 'AdventureWorks2019' on server '.\SQLEXPRESS'. 
+2024-01-17 09:39:23.5627|20008|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Disposed connection to database '' on server '' (0ms). 
+2024-01-17 09:39:23.5627|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5150/api/Customers - - - 500 - application/problem+json;+charset=utf-8 28286.9296ms 

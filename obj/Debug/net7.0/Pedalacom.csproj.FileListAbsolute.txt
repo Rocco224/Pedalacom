@@ -255,7 +255,7 @@ C:\Users\david\Net\Pedalacom\obj\Debug\net7.0\Pedalacom.csproj.CopyComplete
 C:\Users\david\Net\Pedalacom\obj\Debug\net7.0\Pedalacom.genruntimeconfig.cache
 C:\Users\david\Net\Pedalacom\obj\Debug\net7.0\ref\Pedalacom.dll
 C:\Users\Rocco\source\repos\Pedalacom\bin\Debug\net7.0\app.config
-C:\Users\Rocco\source\repos\Pedalacom\bin\Debug\net7.0\Log\NLog.config
+C:\Users\Rocco\source\repos\Pedalacom\bin\Debug\net7.0\nlog.config
 C:\Users\Rocco\source\repos\Pedalacom\bin\Debug\net7.0\appsettings.Development.json
 C:\Users\Rocco\source\repos\Pedalacom\bin\Debug\net7.0\appsettings.json
 C:\Users\Rocco\source\repos\Pedalacom\bin\Debug\net7.0\Pedalacom.exe
@@ -267,6 +267,7 @@ C:\Users\Rocco\source\repos\Pedalacom\bin\Debug\net7.0\Pedalacom.pdb
 C:\Users\Rocco\source\repos\Pedalacom\bin\Debug\net7.0\Azure.Core.dll
 C:\Users\Rocco\source\repos\Pedalacom\bin\Debug\net7.0\Azure.Identity.dll
 C:\Users\Rocco\source\repos\Pedalacom\bin\Debug\net7.0\Humanizer.dll
+C:\Users\Rocco\source\repos\Pedalacom\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\Rocco\source\repos\Pedalacom\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
 C:\Users\Rocco\source\repos\Pedalacom\bin\Debug\net7.0\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\Rocco\source\repos\Pedalacom\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
@@ -313,6 +314,8 @@ C:\Users\Rocco\source\repos\Pedalacom\bin\Debug\net7.0\Microsoft.Win32.SystemEve
 C:\Users\Rocco\source\repos\Pedalacom\bin\Debug\net7.0\Mono.TextTemplating.dll
 C:\Users\Rocco\source\repos\Pedalacom\bin\Debug\net7.0\Newtonsoft.Json.dll
 C:\Users\Rocco\source\repos\Pedalacom\bin\Debug\net7.0\NLog.dll
+C:\Users\Rocco\source\repos\Pedalacom\bin\Debug\net7.0\NLog.Extensions.Logging.dll
+C:\Users\Rocco\source\repos\Pedalacom\bin\Debug\net7.0\NLog.Web.AspNetCore.dll
 C:\Users\Rocco\source\repos\Pedalacom\bin\Debug\net7.0\NuGet.Common.dll
 C:\Users\Rocco\source\repos\Pedalacom\bin\Debug\net7.0\NuGet.Configuration.dll
 C:\Users\Rocco\source\repos\Pedalacom\bin\Debug\net7.0\NuGet.DependencyResolver.Core.dll
@@ -500,6 +503,8 @@ C:\Users\Rocco\source\repos\Pedalacom\obj\Debug\net7.0\Pedalacom.AssemblyInfo.cs
 C:\Users\Rocco\source\repos\Pedalacom\obj\Debug\net7.0\Pedalacom.csproj.CoreCompileInputs.cache
 C:\Users\Rocco\source\repos\Pedalacom\obj\Debug\net7.0\Pedalacom.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Rocco\source\repos\Pedalacom\obj\Debug\net7.0\Pedalacom.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Rocco\source\repos\Pedalacom\obj\Debug\net7.0\Pedalacom.RazorAssemblyInfo.cache
+C:\Users\Rocco\source\repos\Pedalacom\obj\Debug\net7.0\Pedalacom.RazorAssemblyInfo.cs
 C:\Users\Rocco\source\repos\Pedalacom\obj\Debug\net7.0\staticwebassets\msbuild.Pedalacom.Microsoft.AspNetCore.StaticWebAssets.props
 C:\Users\Rocco\source\repos\Pedalacom\obj\Debug\net7.0\staticwebassets\msbuild.build.Pedalacom.props
 C:\Users\Rocco\source\repos\Pedalacom\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.Pedalacom.props
@@ -514,6 +519,3 @@ C:\Users\Rocco\source\repos\Pedalacom\obj\Debug\net7.0\refint\Pedalacom.dll
 C:\Users\Rocco\source\repos\Pedalacom\obj\Debug\net7.0\Pedalacom.pdb
 C:\Users\Rocco\source\repos\Pedalacom\obj\Debug\net7.0\Pedalacom.genruntimeconfig.cache
 C:\Users\Rocco\source\repos\Pedalacom\obj\Debug\net7.0\ref\Pedalacom.dll
-C:\Users\Rocco\source\repos\Pedalacom\obj\Debug\net7.0\Pedalacom.RazorAssemblyInfo.cache
-C:\Users\Rocco\source\repos\Pedalacom\obj\Debug\net7.0\Pedalacom.RazorAssemblyInfo.cs
-C:\Users\Rocco\source\repos\Pedalacom\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
