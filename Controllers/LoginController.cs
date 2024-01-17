@@ -106,7 +106,7 @@ namespace Pedalacom.Controllers
 
                 _logger.LogInformation("Login effettuato");
 
-                return Ok(JwtManager.GenerateJwtToken(customer, _jwt.SecretKey, _jwt.Issuer, _jwt.Audience));
+                return Ok(new {Token = JwtManager.GenerateJwtToken(customer, _jwt.SecretKey, _jwt.Issuer, _jwt.Audience) });
             }
 
             catch (Exception ex)
@@ -115,6 +115,25 @@ namespace Pedalacom.Controllers
 
                 throw;
             }
+        }
+
+        [HttpGet("GetSalt/{email}")]
+        public async Task<ActionResult> GetCustomer(string email)
+        {
+            if (_context.Customers == null)
+            {
+                return NotFound();
+            }
+            var customer = await _context.Customers
+                .Where(c => c.EmailAddress == email && c.CustomerId >= 29485)
+                .FirstOrDefaultAsync();
+
+            if (customer == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(new {Salt = customer.PasswordSalt });
         }
     }
 }

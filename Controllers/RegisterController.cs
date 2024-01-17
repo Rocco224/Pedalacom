@@ -48,17 +48,12 @@ namespace Pedalacom.Controllers
                 if (user != null)
                     return Problem("Email esistente");
 
-                string passwordSha256 = Password.EncryptPassword(customer.PasswordHash);
-                KeyValuePair<string, string> encryptedSaltPassword = Password.EncryptSaltPassword(passwordSha256);
-                customer.PasswordHash = encryptedSaltPassword.Value;
-                customer.PasswordSalt = encryptedSaltPassword.Key;
-
                 _context.Customers.Add(customer);
                 await _context.SaveChangesAsync();
 
                 _logger.LogInformation("Utente registrato");
 
-                return Ok("Utente Registrato");
+                return CreatedAtAction("GetCustomer", new { id = customer.CustomerId }, customer);
             }
             catch (Exception ex)
             {

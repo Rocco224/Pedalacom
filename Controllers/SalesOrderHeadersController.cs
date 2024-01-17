@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -22,14 +23,25 @@ namespace Pedalacom.Controllers
         }
 
         // GET: api/SalesOrderHeaders
+        [Authorize(Roles = "Admin, Guest")]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<SalesOrderHeader>>> GetSalesOrderHeaders()
         {
-          if (_context.SalesOrderHeaders == null)
-          {
-              return NotFound();
-          }
-            return await _context.SalesOrderHeaders.ToListAsync();
+            if (_context.SalesOrderHeaders == null)
+            {
+                return NotFound();
+            }
+
+            // Admin
+            if (User.IsInRole("Admin"))
+            {
+                return await _context.SalesOrderHeaders.ToListAsync();
+            }
+
+            // Guest
+            var customerID = int.Parse(User.FindFirst("CustomerID").Value) ;
+
+            return await _context.SalesOrderHeaders.Where(c => c.CustomerId == customerID).ToListAsync();
         }
 
         // GET: api/SalesOrderHeaders/5
