@@ -54,6 +54,12 @@ namespace Pedalacom.Controllers
             }
         }
 
+            // Guest
+            var customerID = int.Parse(User.FindFirst("CustomerID").Value) ;
+
+            return await _context.SalesOrderHeaders.Where(c => c.CustomerId == customerID).ToListAsync();
+        }
+
         // GET: api/SalesOrderHeaders/5
         [HttpGet("{id}")]
         public async Task<ActionResult<SalesOrderHeader>> GetSalesOrderHeader(int id)

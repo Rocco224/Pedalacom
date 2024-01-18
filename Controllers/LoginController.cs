@@ -120,6 +120,7 @@ namespace Pedalacom.Controllers
         [HttpGet("GetSalt/{email}")]
         public async Task<ActionResult> GetCustomer(string email)
         {
+<<<<<<< HEAD
             try
             {
                 if (_context.Customers == null)
@@ -144,6 +145,22 @@ namespace Pedalacom.Controllers
                 throw;
             }
 
+=======
+            if (_context.Customers == null)
+            {
+                return NotFound();
+            }
+            var customer = await _context.Customers
+                .Where(c => c.EmailAddress == email && c.CustomerId >= 29485)
+                .FirstOrDefaultAsync();
+
+            if (customer == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(new {Salt = customer.PasswordSalt });
+>>>>>>> b5b486735051255deb6dfbf9187df85d065010fd
         }
     }
 }

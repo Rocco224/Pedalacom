@@ -30,7 +30,11 @@ namespace Pedalacom.Authentication
                 issuer: issuer,
                 audience: audience,
                 claims: claims,
+<<<<<<< HEAD
                 expires: DateTime.UtcNow.AddHours(24), // Scadenza del token
+=======
+                expires: DateTime.UtcNow.AddHours(1), // Scadenza del token
+>>>>>>> b5b486735051255deb6dfbf9187df85d065010fd
                 signingCredentials: credentials
             );
 

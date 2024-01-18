@@ -192,6 +192,7 @@
 { "time": "2024-01-17 13:20:36.7612", "event": "0", "level": "DEBUG", "logger": "Pedalacom.Controllers.LoginController", "message": "NLog in LoginController", "url": "http://localhost/api/Login/GetSalt/david16@adventure-works.com", "action": "GetCustomer" }
 { "time": "2024-01-17 13:20:36.7952", "event": "0", "level": "DEBUG", "logger": "Pedalacom.Controllers.LoginController", "message": "NLog in LoginController", "url": "http://localhost/api/Login/Jwt", "action": "GetToken" }
 { "time": "2024-01-17 13:20:36.8172", "event": "0", "level": "INFO", "logger": "Pedalacom.Controllers.LoginController", "message": "Login effettuato", "url": "http://localhost/api/Login/Jwt", "action": "GetToken" }
+<<<<<<< HEAD
 { "time": "2024-01-17 14:11:29.7819", "event": "0", "level": "DEBUG", "logger": "Pedalacom.Controllers.LoginController", "message": "NLog in RegisterController", "url": "http://localhost/Register", "action": "PostCustomer" }
 { "time": "2024-01-17 14:11:46.2327", "event": "0", "level": "DEBUG", "logger": "Pedalacom.Controllers.LoginController", "message": "NLog in RegisterController", "url": "http://localhost/Register", "action": "PostCustomer" }
 { "time": "2024-01-17 15:43:56.9069", "event": "14", "level": "INFO", "logger": "Microsoft.Hosting.Lifetime", "message": "Now listening on: http://localhost:5150", "address": "http://localhost:5150", "EventId": 14, "EventName": "ListeningOnAddress" }
@@ -254,3 +255,5 @@
 { "time": "2024-01-17 18:36:25.0697", "event": "0", "level": "DEBUG", "logger": "Pedalacom.Controllers.LoginController", "message": "NLog in RegisterController", "url": "http://localhost/Register", "action": "PostCustomer" }
 { "time": "2024-01-17 18:36:32.2103", "event": "0", "level": "DEBUG", "logger": "Pedalacom.Controllers.LoginController", "message": "NLog in RegisterController", "url": "http://localhost/Register", "action": "PostCustomer" }
 { "time": "2024-01-17 18:36:35.7276", "event": "0", "level": "DEBUG", "logger": "Pedalacom.Controllers.LoginController", "message": "NLog in RegisterController", "url": "http://localhost/Register", "action": "PostCustomer" }
+=======
+>>>>>>> b5b486735051255deb6dfbf9187df85d065010fd

@@ -47,13 +47,21 @@ namespace Pedalacom.Controllers
 
                 if (user != null)
                     return Problem("Email esistente");
+<<<<<<< HEAD
                 
+=======
+
+>>>>>>> b5b486735051255deb6dfbf9187df85d065010fd
                 _context.Customers.Add(customer);
                 await _context.SaveChangesAsync();
 
                 _logger.LogInformation("Utente registrato");
 
+<<<<<<< HEAD
                 return Ok("Utente registrato");
+=======
+                return CreatedAtAction("GetCustomer", new { id = customer.CustomerId }, customer);
+>>>>>>> b5b486735051255deb6dfbf9187df85d065010fd
             }
             catch (Exception ex)
             {
