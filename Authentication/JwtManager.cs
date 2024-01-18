@@ -12,6 +12,9 @@ namespace Pedalacom.Authentication
         // Creazione del token
         public static string GenerateJwtToken(Customer customer, string secretKey, string issuer, string audience)
         {
+            Console.WriteLine(customer.FirstName);
+            Console.WriteLine(customer.Role);
+
             var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey));
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
 
@@ -20,13 +23,14 @@ namespace Pedalacom.Authentication
             {
                 new Claim(ClaimTypes.Name, customer.FirstName),
                 new Claim(ClaimTypes.Role, customer.Role),
+                new Claim("CustomerID", customer.CustomerId.ToString())
             };
 
             var token = new JwtSecurityToken(
                 issuer: issuer,
                 audience: audience,
                 claims: claims,
-                expires: DateTime.UtcNow.AddMinutes(1), // Scadenza del token
+                expires: DateTime.UtcNow.AddHours(24), // Scadenza del token
                 signingCredentials: credentials
             );
 

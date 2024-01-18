@@ -58,7 +58,7 @@ public partial class Customer
     /// <summary>
     /// E-mail address for the person.
     /// </summary>
-    public string? EmailAddress { get; set; }
+    public string EmailAddress { get; set; }
 
     /// <summary>
     /// Phone number associated with the person.
@@ -86,36 +86,9 @@ public partial class Customer
     public DateTime ModifiedDate { get; set; }
 
     public byte? Valid { get; set; }
-    public string Role {  get; set; }
+    public string? Role {  get; set; }
 
     public virtual ICollection<CustomerAddress>? CustomerAddresses { get; set; } = new List<CustomerAddress>();
 
     public virtual ICollection<SalesOrderHeader>? SalesOrderHeaders { get; set; } = new List<SalesOrderHeader>();
-    public Customer() { }
-    public Customer (int customerId, bool nameStyle, string? title, string firstName, string? middleName, string lastName, string? suffix, string? companyName, string? salesPerson, string? emailAddress, string? phone, string passwordHash, string passwordSalt, Guid rowguid, DateTime modifiedDate, byte? valid, ICollection<CustomerAddress> customerAddresses, ICollection<SalesOrderHeader> salesOrderHeaders)
-    {
-        CustomerId = customerId;
-        NameStyle = nameStyle;
-        Title = title;
-        FirstName = firstName;
-        MiddleName = middleName;
-        LastName = lastName;
-        Suffix = suffix;
-        CompanyName = companyName;
-        SalesPerson = salesPerson;
-        EmailAddress = emailAddress;
-        Phone = phone;
-        PasswordHash = passwordHash;
-        PasswordSalt = passwordSalt;
-        Rowguid = rowguid;
-        ModifiedDate = modifiedDate;
-        Valid = valid;
-        CustomerAddresses = customerAddresses;
-        SalesOrderHeaders = salesOrderHeaders;
-    }
-
-    internal Task<ActionResult<Customer>> Where(Func<object, bool> value)
-    {
-        throw new NotImplementedException();
-    }
 }

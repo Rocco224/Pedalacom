@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -15,39 +16,71 @@ namespace Pedalacom.Controllers
     public class SalesOrderHeadersController : ControllerBase
     {
         private readonly AdventureWorks2019Context _context;
+        private readonly ILogger<SalesOrderHeadersController> _logger;
 
-        public SalesOrderHeadersController(AdventureWorks2019Context context)
+        public SalesOrderHeadersController(AdventureWorks2019Context context, ILogger<SalesOrderHeadersController> logger)
         {
             _context = context;
+            _logger = logger;
+            _logger.LogDebug("NLog in SalesOrderHeadersController");
         }
 
         // GET: api/SalesOrderHeaders
+        [Authorize(Roles = "Admin, Guest")]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<SalesOrderHeader>>> GetSalesOrderHeaders()
         {
-          if (_context.SalesOrderHeaders == null)
-          {
-              return NotFound();
-          }
-            return await _context.SalesOrderHeaders.ToListAsync();
+            try
+            {
+                _logger.LogInformation("Richiesta ordini");
+
+                if (_context.SalesOrderHeaders == null)
+                    return NotFound();
+
+                // Admin
+                if (User.IsInRole("Admin"))
+                    return await _context.SalesOrderHeaders.ToListAsync();
+
+                // Guest
+                var customerID = int.Parse(User.FindFirst("CustomerID").Value);
+
+                return await _context.SalesOrderHeaders.Where(c => c.CustomerId == customerID).ToListAsync();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.Message);
+
+                throw;
+            }
         }
 
         // GET: api/SalesOrderHeaders/5
         [HttpGet("{id}")]
         public async Task<ActionResult<SalesOrderHeader>> GetSalesOrderHeader(int id)
         {
-          if (_context.SalesOrderHeaders == null)
-          {
-              return NotFound();
-          }
-            var salesOrderHeader = await _context.SalesOrderHeaders.FindAsync(id);
-
-            if (salesOrderHeader == null)
+            try
             {
-                return NotFound();
-            }
+                _logger.LogInformation("Richiesta ordine singolo");
 
-            return salesOrderHeader;
+                if (_context.SalesOrderHeaders == null)
+                {
+                    return NotFound();
+                }
+                var salesOrderHeader = await _context.SalesOrderHeaders.FindAsync(id);
+
+                if (salesOrderHeader == null)
+                {
+                    return NotFound();
+                }
+
+                return salesOrderHeader;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.Message);
+
+                throw;
+            }
         }
 
         // PUT: api/SalesOrderHeaders/5
@@ -55,30 +88,42 @@ namespace Pedalacom.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutSalesOrderHeader(int id, SalesOrderHeader salesOrderHeader)
         {
-            if (id != salesOrderHeader.SalesOrderId)
-            {
-                return BadRequest();
-            }
-
-            _context.Entry(salesOrderHeader).State = EntityState.Modified;
-
             try
             {
-                await _context.SaveChangesAsync();
+                _logger.LogInformation("Modifica ordine");
+
+                if (id != salesOrderHeader.SalesOrderId)
+                {
+                    return BadRequest();
+                }
+
+                _context.Entry(salesOrderHeader).State = EntityState.Modified;
+
+                try
+                {
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!SalesOrderHeaderExists(id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+
+                return NoContent();
             }
-            catch (DbUpdateConcurrencyException)
+            catch (Exception ex)
             {
-                if (!SalesOrderHeaderExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
+                _logger.LogError(ex.Message);
+
+                throw;
             }
 
-            return NoContent();
         }
 
         // POST: api/SalesOrderHeaders
@@ -86,34 +131,54 @@ namespace Pedalacom.Controllers
         [HttpPost]
         public async Task<ActionResult<SalesOrderHeader>> PostSalesOrderHeader(SalesOrderHeader salesOrderHeader)
         {
-          if (_context.SalesOrderHeaders == null)
-          {
-              return Problem("Entity set 'AdventureWorks2019Context.SalesOrderHeaders'  is null.");
-          }
-            _context.SalesOrderHeaders.Add(salesOrderHeader);
-            await _context.SaveChangesAsync();
+            try
+            {
+                _logger.LogInformation("Aggiunta ordine");
 
-            return CreatedAtAction("GetSalesOrderHeader", new { id = salesOrderHeader.SalesOrderId }, salesOrderHeader);
+                if (_context.SalesOrderHeaders == null)
+                {
+                    return Problem("Entity set 'AdventureWorks2019Context.SalesOrderHeaders'  is null.");
+                }
+                _context.SalesOrderHeaders.Add(salesOrderHeader);
+                await _context.SaveChangesAsync();
+
+                return CreatedAtAction("GetSalesOrderHeader", new { id = salesOrderHeader.SalesOrderId }, salesOrderHeader);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.Message);
+
+                throw;
+            }
         }
 
         // DELETE: api/SalesOrderHeaders/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteSalesOrderHeader(int id)
         {
-            if (_context.SalesOrderHeaders == null)
+            try
             {
-                return NotFound();
+                if (_context.SalesOrderHeaders == null)
+                {
+                    return NotFound();
+                }
+                var salesOrderHeader = await _context.SalesOrderHeaders.FindAsync(id);
+                if (salesOrderHeader == null)
+                {
+                    return NotFound();
+                }
+
+                _context.SalesOrderHeaders.Remove(salesOrderHeader);
+                await _context.SaveChangesAsync();
+
+                return NoContent();
             }
-            var salesOrderHeader = await _context.SalesOrderHeaders.FindAsync(id);
-            if (salesOrderHeader == null)
+            catch (Exception ex)
             {
-                return NotFound();
+                _logger.LogError(ex.Message);
+
+                throw;
             }
-
-            _context.SalesOrderHeaders.Remove(salesOrderHeader);
-            await _context.SaveChangesAsync();
-
-            return NoContent();
         }
 
         private bool SalesOrderHeaderExists(int id)

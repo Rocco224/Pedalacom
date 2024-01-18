@@ -15,9 +15,9 @@ namespace Pedalacom.Controllers
     public class ProductsController : ControllerBase
     {
         private readonly AdventureWorks2019Context _context;
-        private readonly ILogger<LoginController> _logger;
+        private readonly ILogger<ProductsController> _logger;
 
-        public ProductsController(AdventureWorks2019Context context, ILogger<LoginController> logger)
+        public ProductsController(AdventureWorks2019Context context, ILogger<ProductsController> logger)
         {
             _context = context;
             _logger = logger;

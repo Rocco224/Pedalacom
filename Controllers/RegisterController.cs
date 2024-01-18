@@ -15,9 +15,9 @@ namespace Pedalacom.Controllers
     public class RegisterController : Controller
     {
         private readonly AdventureWorks2019Context _context;
-        private readonly ILogger<LoginController> _logger;
+        private readonly ILogger<RegisterController> _logger;
 
-        public RegisterController(AdventureWorks2019Context context, ILogger<LoginController> logger)
+        public RegisterController(AdventureWorks2019Context context, ILogger<RegisterController> logger)
         {
             _context = context;
             _logger = logger;
@@ -47,18 +47,13 @@ namespace Pedalacom.Controllers
 
                 if (user != null)
                     return Problem("Email esistente");
-
-                string passwordSha256 = Password.EncryptPassword(customer.PasswordHash);
-                KeyValuePair<string, string> encryptedSaltPassword = Password.EncryptSaltPassword(passwordSha256);
-                customer.PasswordHash = encryptedSaltPassword.Value;
-                customer.PasswordSalt = encryptedSaltPassword.Key;
-
+                
                 _context.Customers.Add(customer);
                 await _context.SaveChangesAsync();
 
                 _logger.LogInformation("Utente registrato");
 
-                return Ok("Utente Registrato");
+                return Ok("Utente registrato");
             }
             catch (Exception ex)
             {

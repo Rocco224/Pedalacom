@@ -19,9 +19,9 @@ namespace Pedalacom.Controllers
     public class CustomersController : ControllerBase
     {
         private readonly AdventureWorks2019Context _context;
-        private readonly ILogger<LoginController> _logger;
+        private readonly ILogger<CustomersController> _logger;
 
-        public CustomersController(AdventureWorks2019Context context, ILogger<LoginController> logger)
+        public CustomersController(AdventureWorks2019Context context, ILogger<CustomersController> logger)
         {
             _context = context;
             _logger = logger;
@@ -41,7 +41,10 @@ namespace Pedalacom.Controllers
                     return NotFound();
                 }
 
-                return await _context.Customers.Include(emp => emp.CustomerAddresses).Include(emp => emp.SalesOrderHeaders).ToListAsync();
+                return await _context.Customers.Include(emp => emp.CustomerAddresses)
+                                               .Include(emp => emp.SalesOrderHeaders)
+                                               .Where(emp => emp.CustomerAddresses != null && emp.SalesOrderHeaders != null)
+                                               .ToListAsync();
             }
             catch (Exception ex)
             {
